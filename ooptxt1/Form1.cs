@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
-using static System.Net.Mime.MediaTypeNames;
+using System.Text;
+using System.Windows.Forms;
 
 namespace ooptxt1
 {
@@ -19,23 +12,23 @@ namespace ooptxt1
             InitializeComponent();
         }
 
-        private string Vek(string rodcis,string jmeno)
+        private string Vek(string rodcis, string jmeno)
         {
             //05 07 25 6508
             //David;2;0507256508
 
             bool prvni = false;
 
-            int rok=Convert.ToInt32(rodcis.Substring(0,2));
+            int rok = Convert.ToInt32(rodcis.Substring(0, 2));
             int mesic = Convert.ToInt32(rodcis.Substring(2, 2));
             int den = Convert.ToInt32(rodcis.Substring(4, 2));
-            if (rok>=0)
+            if (rok >= 0)
             {
                 rok += 2000;
-
-
             }
-            else { rok +=  1900;
+            else
+            {
+                rok += 1900;
                 mesic -= 50;
             }
             string mesicslovem;
@@ -115,16 +108,11 @@ namespace ooptxt1
             DateTime narozky = new DateTime(rok, mesic, den);
             TimeSpan vek = new TimeSpan();
             vek = DateTime.Now - narozky;
-            return "věk: "+(vek.Days / 365).ToString() + " " + mesicslovem;
-
-
+            return "věk: " + (vek.Days / 365).ToString() + " " + mesicslovem;
         }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             listBox1.Items.Clear();
             listBox2.Items.Clear();
             double prumer = 0;
@@ -134,26 +122,33 @@ namespace ooptxt1
             StreamReader sr = new StreamReader("rodna_cis.txt");
             while (!sr.EndOfStream)
             {
-
                 string line = sr.ReadLine();
 
                 rozdel = line.Split(';');
                 znamky = znamky + Convert.ToInt32(rozdel[1]);
                 pocet++;
                 listBox1.Items.Add(Vek(rozdel[2], rozdel[0]));
-                listBox2.Items.Add(line);
-
             }
-
             sr.Close();
-            prumer = znamky / pocet;
-
 
             StreamWriter zapis = new StreamWriter("rodna_cis.txt", true, Encoding.UTF8);
+            prumer = znamky / pocet;
 
+            foreach (string vekjmeno in listBox1.Items)
+            {
+                zapis.Write(";" + vekjmeno);
+            }
+
+            zapis.BaseStream.Position = zapis.BaseStream.Length;
             zapis.WriteLine(";" + prumer.ToString());
             zapis.Close();
             MessageBox.Show(prumer.ToString());
+            StreamReader str = new StreamReader("rodna_cis.txt");
+            while (!str.EndOfStream)
+            {
+                listBox2.Items.Add(str.ReadLine());
+            }
+            str.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
