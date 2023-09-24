@@ -9,3 +9,14 @@ C:\Users\suchyd.05\source\repos\ooptxt1\ooptxt1\obj\Debug\ooptxt1.csproj.Generat
 C:\Users\suchyd.05\source\repos\ooptxt1\ooptxt1\obj\Debug\ooptxt1.csproj.CoreCompileInputs.cache
 C:\Users\suchyd.05\source\repos\ooptxt1\ooptxt1\obj\Debug\ooptxt1.exe
 C:\Users\suchyd.05\source\repos\ooptxt1\ooptxt1\obj\Debug\ooptxt1.pdb
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\bin\Debug\ooptxt1.exe.config
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\bin\Debug\ooptxt1.exe
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\bin\Debug\ooptxt1.pdb
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.csproj.AssemblyReference.cache
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.Form1.resources
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.Properties.Resources.resources
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.csproj.GenerateResource.cache
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.csproj.CoreCompileInputs.cache
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.exe
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.pdb
+C:\Users\fokus\Documents\GitHub\ooptxt1\ooptxt1\obj\Debug\ooptxt1.Form2.resources
